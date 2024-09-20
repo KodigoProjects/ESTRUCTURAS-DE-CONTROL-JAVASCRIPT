@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de la Actividad 2</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <main>
+        <h1 class="titulo">Ejercicios de la Actividad 2</h1>
+
+        <!--------------------- Calcular si es mayor de edad -->
+        <section class="cajita">
+            <h2 class="ejercicio"><span class="numeroejericio">Ejercicio 1: </span>¿ Es mayor de Edad?</h2>
+            <p>Introduce tu edad para saber si eres mayor de edad o estás muerto ☠💀</p>
+            <input type="number" id="edad" placeholder="Introduce tu edad">
+            <button onclick="mayorEdad()">Comprobar</button>
+            <p class="resultado" id="resultadoEdad"></p>
+        </section>
+
+        <!------------------- Calcular nota  de un alumno -->
+        <section class="cajita">
+            <h2 class="ejercicio"><span class="numeroejericio">Ejercicio 2: </span>Calcular Nota Final del Alumno</h2>
+            <p>Ingresa los datos para calcular la nota final.</p>
+            <!-- Datos del alumno -->
+            <input type="text" id="nombre" placeholder="Nombre del alumno">
+            <input type="text" id="carnet" placeholder="Carnet del alumno">
+
+            <!-- Notas -->
+            <input type="number" id="examen" placeholder="Nota del examen (20%)">
+            <input type="number" id="tareas" placeholder="Nota de tareas (40%)">
+            <input type="number" id="asistencia" placeholder="Nota de asistencia (10%)">
+            <input type="number" id="investigacion" placeholder="Nota de investigación (30%)">
+
+            <button onclick="calcularNotaFinal()">Calcular Nota Final</button>
+            <p class="resultado" id="resultadoNota"></p>
+        </section>
+
+        <!------------------- Calcular el aumento d eun travajador ----->
+        <section class="cajita">
+        </section>
+
+        <section class="cajita">
+            <h2 class="ejercicio"><span class="numeroejericio">Ejercicio 4: </span>Saber cual es el numero mayor</h2>
+            <p>Ingresa los datos para calcular la nota final.</p>
+            <input type="number" id="num1" placeholder="Primer numero">
+            <input type="number" id="num2" placeholder="Primer numero">
+            <button onclick="numeroMayor()">Calcular</button>
+            <p class="resultado" id="resultadoMayor"></p>
+        </section>
+
+        <!------------------- Calcular descuento en coches ------>
+        <section class="cajita">
+            <h2 class="ejercicio"><span class="numeroejericio">Ejercicio 5: </span>Calcular descuento en coches</h2>
+            <p>Selecciona un coche para calcular el descuento correspondiente.</p>
+            <select id="coche">
+                <option value="ford-fiesta">Ford Fiesta</option>
+                <option value="ford-focus">Ford Focus</option>
+                <option value="ford-escape">Ford Escape</option>
+            </select>
+            <button onclick="calcularDescuento()">Calcular Descuento</button>
+            <p class="resultado" id="resultadoDescuento"></p>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
