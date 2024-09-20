@@ -55,8 +55,8 @@
         <!------------------- Calcular descuento en coches ------>
         <section class="cajita">
             <h2 class="ejercicio"><span class="numeroejericio">Ejercicio 5: </span>Calcular descuento en coches</h2>
-            <p>Selecciona un coche para calcular el descuento correspondiente.</p>
-            <select id="coche">
+            <p>Selecciona un coche para ver el descuento.</p>
+            <select id="coche" class="select">
                 <option value="ford-fiesta">Ford Fiesta</option>
                 <option value="ford-focus">Ford Focus</option>
                 <option value="ford-escape">Ford Escape</option>
@@ -64,6 +64,124 @@
             <button onclick="calcularDescuento()">Calcular Descuento</button>
             <p class="resultado" id="resultadoDescuento"></p>
         </section>
+
+        <!------------------- calcular el descuento en viajes turísticos ------>
+        <section class="cajita">
+            <h2 class="ejercicio"><span class="numeroejericio">Ejercicio 6: </span>Calcular descuento en viajes
+                turisticos </h2>
+            <p>Selecciona el origen y destino para calcular el descuento en tu viaje.</p>
+
+            <label for="origen">Origen:</label>
+            <select id="origen" class="select">
+                <option value="palma">Palma</option>
+            </select>
+
+            <label for="destino">Destino:</label>
+            <select id="destino" class="select">
+                <option value="la costa del sol">La Costa del Sol</option>
+                <option value="panchimalco">Panchimalco</option>
+                <option value="puerto el triunfo">Puerto El Triunfo</option>
+            </select>
+
+            <button onclick="calcularDescuentoViaje()">Calcular Descuento</button>
+            <p class="resultado" id="resultadoViaje"></p>
+        </section>
+        <!-------Estadisticas con calores enteros-->
+        <section class="cajita">
+            <h2 class="ejercicio"><span class="numeroejericio">Ejercicio 7: </span>Estadísticas de valores enteros</h2>
+            <p>Ingresa 10 números enteros para obtener las estadísticas.</p>
+
+            <!-- Inputs para los 10 valores -->
+            <div id="valores" class="entradas">
+                <input type="number" id="valor1" placeholder="Valor 1">
+                <input type="number" id="valor2" placeholder="Valor 2">
+                <input type="number" id="valor3" placeholder="Valor 3">
+                <input type="number" id="valor4" placeholder="Valor 4">
+                <input type="number" id="valor5" placeholder="Valor 5">
+                <input type="number" id="valor6" placeholder="Valor 6">
+                <input type="number" id="valor7" placeholder="Valor 7">
+                <input type="number" id="valor8" placeholder="Valor 8">
+                <input type="number" id="valor9" placeholder="Valor 9">
+                <input type="number" id="valor10" placeholder="Valor 10">
+            </div>
+
+            <button onclick="calcularEstadisticas()">Calcular Estadísticas</button>
+
+            <p class="resultado" id="resultadoNegativos"></p>
+            <p class="resultado" id="resultadoPositivos"></p>
+            <p class="resultado" id="resultadoMultiplos"></p>
+            <p class="resultado" id="resultadoPares"></p>
+        </section>
+
+        <!------------------- Tabla de multiplicar ------>
+        <section class="cajita">
+            <h2 class="ejercicio"><span class="numeroejericio">Ejercicio 8: </span>Tabla de Multiplicar</h2>
+            <p>Introduce un número para ver su tabla de multiplicar del 1 al 10.</p>
+
+            <input type="number" id="numero" placeholder="Introduce un número">
+            <button onclick="mostrarTabla()">Mostrar Tabla</button>
+
+            <div id="resultadoTabla" class="resultado"></div>
+        </section>
+
+        <!------------------- Conversión de Temperatura y mostrar si esta normal o calientito  ------>
+        <section class="cajita">
+            <h2 class="ejercicio"><span class="numeroejericio">Ejercicio 9: </span>Conversión de Temperatura</h2>
+            <p>Introduce una temperatura en Celsius para convertirla a Fahrenheit.</p>
+
+            <input type="number" id="celsius" placeholder="Introduce temperatura en Celsius">
+            <button onclick="convertirTemperatura()">Convertir</button>
+
+            <p class="resultado" id="resultadoTemperatura"></p>
+        </section>
+
+        <!------------------- Promedio de Edades por Turno ------>
+        <section class="cajita">
+            <h2 class="ejercicio"><span class="numeroejericio">Ejercicio 10: </span>Promedio de Edades por Turno</h2>
+            <!------------------------- Edades del turno mañana -->
+            <h3>Turno Mañana (5 estudiantes)</h3>
+            <div id="manana" class="entradas">
+                <input type="number" id="edadM1" placeholder="Edad 1">
+                <input type="number" id="edadM2" placeholder="Edad 2">
+                <input type="number" id="edadM3" placeholder="Edad 3">
+                <input type="number" id="edadM4" placeholder="Edad 4">
+                <input type="number" id="edadM5" placeholder="Edad 5">
+            </div>
+            <!---------------------- Edades del turno tarde ----------->
+            <h3>Turno Tarde (6 estudiantes)</h3>
+            <div id="tarde" class="entradas">
+                <input type="number" id="edadT1" placeholder="Edad 1">
+                <input type="number" id="edadT2" placeholder="Edad 2">
+                <input type="number" id="edadT3" placeholder="Edad 3">
+                <input type="number" id="edadT4" placeholder="Edad 4">
+                <input type="number" id="edadT5" placeholder="Edad 5">
+                <input type="number" id="edadT6" placeholder="Edad 6">
+            </div>
+
+            <!---------- Edades del turno noche ----------->
+            <h3>Turno Noche (11 estudiantes)</h3>
+            <div id="noche" class="entradas">
+                <input type="number" id="edadN1" placeholder="Edad 1">
+                <input type="number" id="edadN2" placeholder="Edad 2">
+                <input type="number" id="edadN3" placeholder="Edad 3">
+                <input type="number" id="edadN4" placeholder="Edad 4">
+                <input type="number" id="edadN5" placeholder="Edad 5">
+                <input type="number" id="edadN6" placeholder="Edad 6">
+                <input type="number" id="edadN7" placeholder="Edad 7">
+                <input type="number" id="edadN8" placeholder="Edad 8">
+                <input type="number" id="edadN9" placeholder="Edad 9">
+                <input type="number" id="edadN10" placeholder="Edad 10">
+                <input type="number" id="edadN11" placeholder="Edad 11">
+            </div>
+
+            <button onclick="calcularPromedios()">Calcular Promedios</button>
+
+            <p class="resultado" id="resultadoManana"></p>
+            <p class="resultado" id="resultadoTarde"></p>
+            <p class="resultado" id="resultadoNoche"></p>
+            <p class="resultado" id="resultadoMayor"></p>
+        </section>
+
     </main>
 
     <script src="main.js"></script>

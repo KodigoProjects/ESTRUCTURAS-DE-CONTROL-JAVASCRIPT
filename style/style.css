@@ -35,6 +35,14 @@ p {
     margin-bottom: 20px;
 }
 
+label {
+    font-size: 1rem;
+    color: #d4f1f3;
+    /* Texto gris claro */
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
 .numeroejericio {
     color: rgb(106, 245, 255);
     font-weight: 200;
@@ -63,6 +71,8 @@ input {
     border-radius: 8px;
     font-size: 1rem;
     outline: none;
+    box-sizing: border-box;
+    /* Añadido para evitar problemas de padding y ancho */
 }
 
 input:focus {
@@ -91,7 +101,7 @@ button:active {
     background-color: #1f6391;
 }
 
-#coche {
+.select {
     width: auto;
     background-color: #3498db;
     margin-bottom: 3%;
@@ -101,6 +111,26 @@ button:active {
     padding: 1vh;
 }
 
+.entradas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: auto;
+    margin: auto;
+}
+
+.entradas input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #00aaff;
+    border-radius: 5px;
+}
+
+h3 {
+    color: wheat;
+}
+
+/* Responsive para pantallas pequeñas */
 @media (max-width: 600px) {
     h1 {
         font-size: 2rem;
@@ -110,12 +140,21 @@ button:active {
         font-size: 1.5rem;
     }
 
-    input[type="number"] {
-        width: 200px;
+    /* Inputs y botones más pequeños para pantallas reducidas */
+    input {
+        width: 100%;
+        font-size: 0.9rem;
     }
 
     button {
         padding: 8px 16px;
         font-size: 0.9rem;
+        width: 100%;
+    }
+
+    /* Grid de una sola columna en dispositivos pequeños */
+    .entradas {
+        grid-template-columns: 1fr;
+        gap: 5px;
     }
 }
